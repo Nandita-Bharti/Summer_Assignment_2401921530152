@@ -1,0 +1,49 @@
+public class LibraryInterfaceDemo {
+    public static void main(String[] args) {
+        
+        // ==========================================
+        // Test Case #1: KidUsers
+        // ==========================================
+        System.out.println("--- Testing KidUsers ---");
+        KidUsers kid = new KidUsers();
+
+        // Testing registration with Age = 10
+        kid.age = 10;
+        kid.registerAccount();
+
+        // Testing registration with Age = 18
+        kid.age = 18;
+        kid.registerAccount();
+
+        // Testing book request with BookType = "Kids"
+        kid.bookType = "Kids";
+        kid.requestBook();
+
+        // Testing book request with BookType = "Fiction"
+        kid.bookType = "Fiction";
+        kid.requestBook();
+
+        System.out.println(); // Blank line for better readability
+
+        // Test Case #2: AdultUser
+       
+        System.out.println("--- Testing AdultUser ---");
+        AdultUser adult = new AdultUser();
+
+        // Testing registration with Age = 5
+        adult.age = 5;
+        adult.registerAccount();
+
+        // Testing registration with Age = 23
+        adult.age = 23;
+        adult.registerAccount();
+
+        // Testing book request with BookType = "Kids"
+        adult.bookType = "Kids";
+        adult.requestBook();
+
+        // Testing book request with BookType = "Fiction"
+        adult.bookType = "Fiction";
+        adult.requestBook();
+    }
+}
