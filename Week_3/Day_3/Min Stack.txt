@@ -1,0 +1,57 @@
+// class MinStack {
+//     Stack<Integer> minStack;
+//     Stack<Integer> st;
+
+//     public MinStack() {
+//         st =  new Stack<>();
+//         minStack =  new Stack<>();
+//     }
+    
+//     public void push(int val) {
+//         st.push(val);
+//         if(minStack.size() == 0 || val < minStack.peek()) minStack.push(val);
+//         else minStack.push(minStack.peek());
+//     }
+    
+//     public void pop() {
+//         st.pop();
+//         minStack.pop();
+//     }
+    
+//     public int top() {
+//         return st.peek();
+//     }
+    
+//     public int getMin() {
+//         return minStack.peek();
+//     }
+// }
+
+class MinStack {
+    Stack<Integer> minStack;
+    Stack<Integer> st;
+
+    public MinStack() {
+        st =  new Stack<>();
+        minStack =  new Stack<>();
+    }
+    
+    public void push(int val) {
+        st.push(val);
+        if(minStack.size() == 0 || val < minStack.peek()) minStack.push(val);
+        else minStack.push(minStack.peek());
+    }
+    
+    public void pop() {
+        st.pop();
+        minStack.pop();
+    }
+    
+    public int top() {
+        return st.peek();
+    }
+    
+    public int getMin() {
+        return minStack.peek();
+    }
+}
